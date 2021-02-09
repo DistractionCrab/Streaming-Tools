@@ -1,0 +1,58 @@
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: none;
+  border-top: none;
+}
+
+
+.display_text {
+	font-size: 24pt;
+	font-style: bold;
+	color: white;
+	height: 70px;
+	background-image: url('images/background.png');
+	background-size: 100% 70%;
+	background-position: center;
+	background-repeat: no-repeat;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}

@@ -1,0 +1,25 @@
+body {
+	color: white;
+	background-color: black;
+}
+
+
+.active {
+	background-color: green;
+}
+
+.inactive {
+	background-color: black;
+}
+
+td, tr {
+	text-align: center;
+	font-weight: bold;
+	opacity: 0.75;
+	text-shadow: 2px 2px #000000;
+}
+
+td {
+	width: 100px;
+	height: 100px;
+}

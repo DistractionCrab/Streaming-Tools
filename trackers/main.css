@@ -1,0 +1,7 @@
+.icon {
+	width: 100px;
+	height: 100px;
+}
+.inactive {
+	opacity: 0.5;
+}
