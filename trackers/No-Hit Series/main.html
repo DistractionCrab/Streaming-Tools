@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>No-Hit Series Run Tracker</title>
+	<style type="text/css">
+		.split {
+			background-color: black;
+			border-width: 5px;
+			border-color: white;
+			border-style: solid;
+		}
+	</style>
+	
+</head>
+<body>
+	<table>
+		<tr>
+			<td class="split" onclick="ctrl[0].changeState(this)"><img src="logos/des.png"></td>
+			<td class="split" onclick="ctrl[2].changeState(this)"><img src="logos/ds1.png"></td>
+			<td class="split" onclick="ctrl[3].changeState(this)"><img src="logos/ds2.png"></td>
+			<td class="split" onclick="ctrl[4].changeState(this)"><img src="logos/ds3.png"></td>
+			<td class="split" onclick="ctrl[5].changeState(this)"><img src="logos/bb.png"></td>
+			<!--<td class="split" onclick="ctrl[6].changeState(this)"><img src="logos/sekiro.png"></td>-->
+		</tr>
+	</table>
+	<script type="text/javascript">
+
+
+		class RunState {
+			constructor() {
+				this.state = 0
+			}
+
+			changeState(elem) {
+				this.state = (this.state + 1) % 3;
+				if (this.state == 0) {
+					elem.style["border-color"] = "white";
+					elem.style["border-width"] = "5px";
+				} else if (this.state == 1) {
+					elem.style["border-color"] = "yellow";
+					elem.style["border-width"] = "5px";
+				} else if (this.state == 2) {
+					elem.style["border-color"] = "green";
+					elem.style["border-width"] = "5px";
+				}
+			}
+
+		}
+
+		var splits = document.getElementsByClassName("split");
+		var ctrl = Array.apply(null, Array(10)).map(function(){return new RunState()})
+		console.log(ctrl);
+	</script>
+</body>
+</html>
